@@ -1,0 +1,599 @@
+@charset "UTF-8";
+
+/* Versão Mobile First */
+
+@font-face{
+    font-family: fonte1;
+    src: url('../fontes/Lora-VariableFont_wght.ttf');
+}
+
+
+*, *:before, *:after {
+    font-family:  fonte1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Mantem o espaçamento e não deixa quebrar o Layout*/ /*Inclui minha borda no tamanho da página.*/
+    -webkit-box-sizing: border-box;
+}
+
+:root{
+    --cor1: #131F2C;
+    --cor2: #16495C;
+    --cor3: #D6D6D6;
+    --cor4: #CC8C5D;
+    --cor5: #06253d;
+    --cor6: #101728;
+}
+
+html{
+    height: 100vh;
+    background-color: var(--cor6);
+}
+
+header {
+    height: 600px;
+    background: black url('../imagens/header.png') no-repeat; /*Coloca a minha imagem de background.*/
+    background-size: cover; /* Faz com que a minha imagem ocupe a tela inteira.*/
+    background-position: center center;
+}
+header > p {
+    text-align: center;
+    padding-top: 10%;
+    color: var(--cor3);
+    font-size: 3em;
+    font-weight: 900;
+    font-style: italic;
+    clear: both;/*Faz aparecer o que está escondido*/
+}
+
+/*Inicio container*/
+.container {
+    background-color: var(--cor6);
+    background-size:90%;
+    color: #ccc;
+    padding: 10px;
+    clear: both;
+    display: flex; /*Coloca minhas divs lado a lado.*/
+}
+.row {
+    width: 65%;
+    padding: 10px;
+    color: var(--cor4);
+}
+.row2 {
+    width: 35%;
+    float: right;
+    padding: 20px;
+    color: var(--cor4);
+}
+/*Fim Container*/
+
+/* Início Container2 */
+.container2 {
+    background-size: 90%;
+    padding: 10px;
+    clear: both;
+    display: flex;
+    
+}
+
+/*Início Container Serviços*/
+#containeServicos {
+    width: 90%;
+    margin: auto;
+    margin-top: -30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex; /*Coloca todas as caixas items uma do lado da outra.*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background-color: var(--cor6);
+    border: 10px solid rgba(247, 245, 245, 0.932);
+    color: var(--cor4);
+    padding: 20px;
+    text-align: center;
+    flex: auto;/*Não deixa ter espaços em branco. Ocupa todo o espaço do container pai. */
+    flex-direction: row;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    border-radius: 14px;
+}
+
+/*Fim Container Serviços*/
+hr {
+    height: 3px;
+    background-color: white;
+}
+.hrr {
+    width: 40%;
+    margin: auto;
+}
+/* MENU 
+__________________*/
+span#burguer {
+    background-color: var(--cor1);
+    color: var(--cor4);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+span#burguer:hover {
+    background-color: var(--cor1);
+    color: black;
+
+}
+
+menu {
+    display: none; /*Faz com que o meu menu desapareça.*/
+}
+menu > ul {
+    list-style-type: none;
+}
+menu > ul > li > a {
+    display: block;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 5px;
+    margin-right: -6px;
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border-top: 2px solid gray;
+    border-radius: 10px;
+}
+menu > ul > li > a:hover {
+    background-color: var(--cor2);
+}
+.calPenal > a{
+    font-size: 12px;
+    padding: 6px;
+    padding-bottom: 3px;
+}
+/* FIM MENU */
+
+.row3 {
+    width: 65%;
+    padding: 10px;
+}
+.row3 > h1 {
+    font-size:1.4em;
+    color: var(--cor3);
+    margin-right: 470px;
+}
+.row4 {
+    width: 35%;
+    float: right;
+    padding: 20px;
+    
+}
+
+header > p {
+    background-attachment: fixed;
+    height: 73%;
+    font-size: 2.0em;
+    text-shadow: 5px 5px 5px black;
+}
+/*Fim Container2*/
+
+h1 {
+    color: var(--cor4);
+    font-size: 2em; 
+    margin: 15px;
+    text-align: center;
+    font-family: fonte1;
+}
+
+
+/* Inicio Section */
+
+.container-section {
+    display: flex;
+    flex-direction: row;
+}
+.section:not(:first-of-type) {/*Esse código está dizendo que vai fazer a configuração abaixo em todas as sections de menos na primeira.*/
+    margin-top: 60px;
+}
+.section-header {/*Aqui eu configuro o texto do meu header do layout*/
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+.section-header h1 {
+    font-size: 38px;
+    font-weight: normal;
+}
+.row-section {
+    float: left;
+    width: 200px;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+/*INICIO DIV-SECTION-IMAGEM JOAO E TEXTO */
+
+.row-section-img{
+    margin-top: 20px;
+}
+
+/*FIM SECTINO IMAGEM JOAO E TEXTO */
+
+/*INICIO CONTENT*/
+
+div.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+div.content{
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+    /*INICIO SERVICOS-COLUNAS*/
+    
+    .servicos-coluna{
+        margin-bottom: 20px;
+        width: 49%;
+        margin-right: 2%;/*Espaçamento entre as minhas imagens*/
+        margin-bottom: 2%;/*Espaçamento entre as minhas imagens*/
+        float: left;
+    }
+    .servicos-coluna:nth-child(odd){
+        margin-right: 0;
+    }
+    .servicos-coluna:first-child{
+        width: 100%;/*É aqui que eu estou mudando o tamanho da minha primeira imagem.*/
+    }    /*Destinos-col*/
+    .servicos-coluna {
+        margin-bottom: 20px;
+    }
+    
+.box {
+    display: block;
+    position: relative;
+    overflow: hidden;/*Faz com que toda a configuração da minha imagem acompanhe a configuração do meu box.*/
+    border-radius: 10px;
+}
+
+.box-cover{
+    font-size: 0;
+    line-height: 1em;
+}
+.box-cover img{/*Faz com que minha imagem fique dentro do box.*/
+    width: 100%;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);/*Faz o efeito de afundar quando passo o mouse na imagem, de primeiro momento não percebo mas a imagem da uma aumentada dentro do box quando eu atualizo.*/
+    -webkit-transition: all 300ms ease-in-out;/*Faz o efeito da imagem ser mais sútil.*/
+    transition: all 300ms ease-in-out;
+}
+.box-detalhes {
+    position: absolute;/*vai fazer com que ele fique acima da imagem.*/
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+}
+.box-detalhes:before{/*Cria a sombra.*/
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity:  .8;
+    visibility: hidden;/*Deixa a sombra escondida.*/
+    background: linear-gradient(to bottom, transparent, #000);
+    transition: all 250ms ease-in-out;
+    -webkit-transform: translate(0,50%);
+    transform: translate(0,50%);
+}
+
+.box-detalhes-info{/*Aqui é feito a sombra que está sobre a imagem, para da um efeito mais elegante.*/
+    position: relative;
+    z-index: 2;
+    opacity: 0;/*Este opacity e o visibility abaixo faz com que o texto da minha imagem suma*/
+    visibility: hidden;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms  ease-in-out;
+    -webkit-transform: translate(0,50%);
+    transform: translate(0,50%);
+}
+.box-detalhes-info h3{ 
+    font-size: 20px;
+}
+
+/*box:hover*/
+.box:hover .box-cover img{/*Esse código está fazendo o efeito de quando eu passar o mouse por cima da imagem ela sai da escala de 1.1 e volta para 1 causando o efeito de aumentar e diminuir.*/
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.box:hover .box-detalhes:before, 
+.box:hover .box-detalhes-info{/*Faz com que a imagem suba quando passado o mouse por cima dela.*/
+    opacity: 1;/*Este opacity e o visibility abaixo faz com que o texto da minha imagem apareça quando passado o mouse por cima.*/
+    visibility: visible;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+}
+/* Fim Section */
+
+img#phone {display: none;} /*Como essa é a minha versão para celular, eu quero que exiba esta imagem, então eu deixo ela como block, exibir bloco.*/
+img#tablet {display: none;} /*Com o display none eu estou escondendo a minha imagem de tablet.*/
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
+
+/*INICIO container_contatos1*/
+.container_contatos1{
+    width: 100%;
+    height: 410px;
+    margin: 0 auto;
+    background: #02020200;
+}
+
+/*FIM container_contatos1*/
+
+/*INICIO container_contatos2*/
+.container_contatos2{
+   width: 100%;
+   margin: 0 auto;
+}
+
+/*FIM container_contatos2*/
+
+/* INICIO SECTION-CONTATOS*/
+
+.section-contatos{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cor6);
+    width: inherit; /*Ocupa o tamanho total da minha página*/
+    height: 410px;
+    box-shadow: 2px 2px 2px black;
+}
+section h2{
+    color: #f5f5ff;
+    font-size: 1.8em;
+    margin-top: 5px;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+form label{
+    color: #f5f5f5;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+form input{
+    outline: none; /*Tira as bordas das texts box.*/
+    border: 0;
+    padding: 2px;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+form input:focus{ /*Faz um efeito de border radius ao selecionar o campo texto.*/
+    border-radius: 16px;
+}
+form textarea{
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 16px;
+}
+form button{
+    margin: auto;
+    width: 200px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f5f5f5;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 5px;
+}
+form button:hover{
+    background: #f5f5f5;
+    color: #101026;
+    border-radius: 16px;
+}
+/*FIM SECTION CONTATOS*/
+/*PÁGINA DO OBRIGADO*/
+.main-obrigado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    background: #101026;
+    flex-direction: column;
+}
+.text{
+    font-size: 45px;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+.paragrafo{
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+.btn{
+    padding: 15px 55px;
+    background: #f5f5f5;
+    text-decoration: none;
+    color: #101026;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.btn:hover{
+    border-radius: 16px;
+}
+.button {
+    color: #06253d;
+    background-color: #fcfcfc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1.9em;
+    margin-bottom: 10px;
+}
+/*FIM DA PÁGINA OBRIGADO*/
+
+/* INICIO CASOS ATUADOS-video */
+
+.container-video{
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+.video > iframe{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+}
+/* FIM DE CASOS ATUADOS-video */
+
+/*FOOTER
+__________________________________*/
+
+
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;/*Retira o sublinhado do texto.*/
+    color: inherit; transition: all .4s ease-in-out;/*Tira a cor azul das minhas palavras e coloca um efeito de transição nos meus links é muito legal pois faz a configuração em toda a minha página.*/
+}
+a:hover {
+    color: #f9014d;/*Coloca a cor das minhas palavras do ancorâ em vermelho quando passo o mouse por cima da palavra.*/
+}
+
+
+/*GERAIS
+____________________________________*/
+
+.rowfooter{
+    float: left;
+    width: 100%;
+}
+
+/*FOOTER
+__________________________________*/
+.footer{
+    background-color: var(--cor1);
+    float: left;
+    width: 100%;
+    color: #fff;
+    padding: 30px 0px; /*Os 30px é referente a altura de baixo e de cima, o 0px é referente aos lados.*/
+}
+.footer-col{
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+.footer-col h1{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* LINKS ÚTEIS */
+.footer-col-links li{
+    padding: 10px 0px;
+}
+.footer-col-links li:not(:last-of-type)  {/*Coloquei bordas brancas nos meus links. O last-of-type tira a borda da última linha.*/
+    border-bottom: 1px solid #fff;
+}
+
+/* REDES SOCIAIS*/
+.footer-col-social li .fab{
+    background: #000;
+    font-size: 20px;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    border-radius: 8px;
+}
+
+/* AUTORAIS*/
+.footer-autorais{
+    padding-top: 20px;
+    border-top: 1px solid #fff;
+    color: #ccc;
+}
+    /*estatisticas*/
+    .estatisticas{
+        flex-direction: column;
+    }
+    .estatisticas-item{
+        min-width: 90%;
+    }
+    .estatisticas-item:not(:last-of-type){/*Apartir do código -> :not(:last-of-type) significa que eu estou pedindo que faça toda a configuração do bloco abaixo, mas que na ultima div da classe estatistica não é para fazer, sendo assim a linha e o espaço é retirado. A div é a do span de 15,000 */
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+
+/*BREACKPOINTS MINÍMOS
+____________________________________*/
+
+@media (min-width: 768px) {/*Aqui eu configurei as classes footer-col para receber essas configuração para quando a tela ATINGIR o tamanho de 768 acima. Essa configuração é para o tamanho de tela docomputador.*/
+
+    /*FOOTER*/
+    .footer-col{
+        width: 45%;
+    }
+    .footer-col:nth-child(2){/*Estou configurando minha coluna dois.*/
+        width: 30%;
+        margin-left: 5%;
+    }
+    .footer-col:nth-child(3){/*Estou configurando minha coluna três.*/
+        width: 15%;
+        float: right;
+    }
+
+}
+
+/* TEXT ALIGN*/
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.fl-left{float: left;}
+.fl-right{float: right;}
+
+/* BOTÃO WHATSAPP */
+
+.whats {
+    position: fixed; /*Mantém a imagem fixa sobre a tela.*/
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999; /*Vai fazer com que a minha imagem fique por cima de todos.*/
+}
